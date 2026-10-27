@@ -11,11 +11,11 @@ export default function Header({
 }: HeaderProps) {
   return (
     <>
-      <div className="fixed top-0 h-20 w-screen bg-navy-800 flex justify-center items-center z-10 text-white">
-        <div className="flex justify-around items-center w-11/12">
+      <div className="fixed top-0 md:h-20 h-26 w-screen bg-navy-800 z-10 text-white flex flex-col justify-around">
+        <div className="flex flex-col md:flex-row justify-around items-center w-full h-full">
           <div className="flex items-center">
             <img src="/icon.png" className="w-8 h-8 mr-2" alt="" />
-            <h1 className="text-2xl font-bold">Programas de Refuerzo</h1>
+            <h1 className="md:text-2xl font-bold">Programas de Refuerzo</h1>
           </div>
           <div className="flex items-center gap-2 text-xs">
             <button

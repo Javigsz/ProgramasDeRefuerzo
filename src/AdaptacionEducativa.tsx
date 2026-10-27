@@ -445,9 +445,9 @@ export default function AdaptacionEducativa() {
                                   !medidas[fieldIndex].seleccionada,
                                 )
                               }
-                              className={`w-full min-w-0 border-2 rounded-md p-2 text-left whitespace-normal wrap-break-word bg-navy-50 ${
+                              className={`w-full min-w-0 border-2 cursor-pointer rounded-md p-2 text-left whitespace-normal wrap-break-word bg-navy-50 ${
                                 medidas[fieldIndex].seleccionada
-                                  ? "border-blue-500"
+                                  ? "border-navy-500"
                                   : "border-navy-200"
                               }`}
                             >
