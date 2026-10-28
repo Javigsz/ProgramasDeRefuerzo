@@ -31,7 +31,7 @@ export default function ModalAnadirOpcion({
       <div className="w-full max-w-lg rounded-lg bg-white p-5 shadow-xl">
         <h2
           id="titulo-nueva-medida"
-          className="text-lg font-bold text-navy-900"
+          className="text-lg font-bold text-slate-900"
         >
           Añadir opción
         </h2>
@@ -51,7 +51,7 @@ export default function ModalAnadirOpcion({
           onChange={(event) => setTexto(event.target.value)}
           rows={3}
           autoFocus
-          className="mt-1 w-full rounded-md border border-slate-300 p-2 text-sm"
+          className="mt-1 w-full rounded-md border border-slate-300 p-2 text-sm focus:border-slate-700 focus:outline-none focus:ring-0"
           placeholder="Escribe la nueva medida educativa..."
         />
 
@@ -59,7 +59,7 @@ export default function ModalAnadirOpcion({
           <button
             type="button"
             onClick={onCancel}
-            className="rounded-md border border-slate-300 px-3 py-2 text-sm"
+            className="rounded-md border border-slate-300 px-3 py-2 text-sm cursor-pointer"
           >
             Cancelar
           </button>
@@ -67,7 +67,7 @@ export default function ModalAnadirOpcion({
             type="button"
             onClick={confirmar}
             disabled={!texto.trim()}
-            className="rounded-md bg-navy-800 px-3 py-2 text-sm text-white hover:bg-navy-900 disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-md bg-slate-800 px-3 py-2 text-sm text-white hover:bg-slate-900 disabled:cursor-not-allowed cursor-pointer disabled:opacity-50"
           >
             Añadir medida
           </button>

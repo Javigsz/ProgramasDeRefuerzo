@@ -298,7 +298,21 @@ export default function AdaptacionEducativa() {
           onSubmit={handleSubmit(guardarLocal)}
           className="flex flex-col gap-4 max-w-11/12 md:max-w-10/12 mx-auto my-20"
         >
-          <section className="border-2 border-navy-200 rounded-md p-2 bg-white">
+          <section className="border-2 border-slate-200 rounded-md p-2 bg-white">
+            <h2 className="font-bold">CRITERIO DE USO</h2>
+            <p className="mt-1 text-slate-800 px-4">
+              No es una plantilla diagnóstica ni una lista de medidas que deban
+              aplicarse de forma automática. Es un banco de opciones para
+              seleccionar, combinar y concretar según el perfil funcional del
+              alumno o alumna, la materia, los criterios de evaluación y la
+              respuesta observada en el aula. Esta guía facilita al profesorado
+              la selección y redacción de medidas educativas en los apartados de
+              Séneca relativos a acceso a la información, actividades y tareas,
+              recursos didácticos, agrupamientos/espacios/tiempos e instrumentos
+              de evaluación.
+            </p>
+          </section>
+          <section className="border-2 border-slate-200 rounded-md p-2 bg-white">
             <h2 className="font-bold">DATOS DEL ALUMNO Y MATERIA</h2>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 p-4">
@@ -307,7 +321,7 @@ export default function AdaptacionEducativa() {
                 <input
                   {...register("alumno.nombre")}
                   placeholder="Ej. J.M.C.S. (opcional)"
-                  className="w-full min-w-0 border-2 border-navy-200 rounded-md m-2 p-2"
+                  className="w-full min-w-0 border-2 border-slate-200 rounded-md m-2 p-2 focus:border-slate-700 focus:outline-none focus:ring-0"
                 />
               </label>
 
@@ -316,7 +330,7 @@ export default function AdaptacionEducativa() {
                 <input
                   {...register("alumno.materia")}
                   placeholder="Ej. Matemáticas / Lengua"
-                  className="w-full min-w-0 border-2 border-navy-200 rounded-md m-2 p-2"
+                  className="w-full min-w-0 border-2 border-slate-200 rounded-md m-2 p-2 focus:border-slate-700 focus:outline-none focus:ring-0"
                 />
               </label>
 
@@ -325,7 +339,7 @@ export default function AdaptacionEducativa() {
                 <input
                   {...register("alumno.curso")}
                   placeholder="Ej. 2.º ESO B"
-                  className="w-full min-w-0 border-2 border-navy-200 rounded-md m-2 p-2"
+                  className="w-full min-w-0 border-2 border-slate-200 rounded-md m-2 p-2 focus:border-slate-700 focus:outline-none focus:ring-0"
                 />
               </label>
 
@@ -334,13 +348,13 @@ export default function AdaptacionEducativa() {
                 <input
                   {...register("alumno.profesor")}
                   placeholder="Ej. D. Antonio Pérez"
-                  className="w-full min-w-0 border-2 border-navy-200 rounded-md m-2 p-2"
+                  className="w-full min-w-0 border-2 border-slate-200 rounded-md m-2 p-2 focus:border-slate-700 focus:outline-none focus:ring-0"
                 />
               </label>
             </div>
           </section>
 
-          <section className="border-2 border-navy-200 rounded-md p-2 bg-white">
+          <section className="border-2 border-slate-200 rounded-md p-2 bg-white">
             <h2 className="font-bold">TIPOLOGÍA O NECESIDADES DEL ALUMNO</h2>
 
             <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,150px),1fr))] gap-3 m-4">
@@ -370,10 +384,10 @@ export default function AdaptacionEducativa() {
                         shouldValidate: true,
                       });
                     }}
-                    className={`min-w-0 rounded-md border p-2 text-left transition-colors text-sm cursor-pointer font- ${
+                    className={`min-w-0 rounded-md border p-2 text-slate-800 text-left transition-colors text-sm cursor-pointer font- ${
                       seleccionada
-                        ? "border-navy-800 bg-navy-800 text-white"
-                        : "border-2 border-navy-200 bg-white text-gray-700 hover:bg-navy-50"
+                        ? "border-slate-800 bg-slate-800 text-white"
+                        : "border-2 border-slate-200 bg-white text-gray-700 hover:bg-slate-50"
                     }`}
                   >
                     {necesidad}
@@ -391,14 +405,14 @@ export default function AdaptacionEducativa() {
                   shouldValidate: true,
                 })
               }
-              className="text-xs underline hover:text-navy-800 cursor-pointer"
+              className="text-xs underline hover:text-slate-800 cursor-pointer"
             >
               Desmarcar necesidades
             </button>
           </section>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr]">
-            <section className="border-2 border-navy-200 rounded-md p-2 bg-white">
+            <section className="border-2 border-slate-200 rounded-md p-2 bg-white">
               <h2 className="font-bold">MEDIDAS EDUCATIVAS</h2>
 
               {APARTADOS.map((titulo, index) => {
@@ -422,7 +436,7 @@ export default function AdaptacionEducativa() {
                 return (
                   <section
                     key={apartadoId}
-                    className="my-4 p-4 border border-navy-200 rounded"
+                    className="my-4 p-4 border border-slate-200 rounded"
                   >
                     <h3 className="font-bold">
                       {apartadoId}. {titulo}
@@ -445,10 +459,10 @@ export default function AdaptacionEducativa() {
                                   !medidas[fieldIndex].seleccionada,
                                 )
                               }
-                              className={`w-full min-w-0 border-2 cursor-pointer rounded-md p-2 text-left whitespace-normal wrap-break-word bg-navy-50 ${
+                              className={`w-full min-w-0 border-2 cursor-pointer rounded-md p-2 text-left whitespace-normal wrap-break-word bg-slate-50 ${
                                 medidas[fieldIndex].seleccionada
-                                  ? "border-navy-500"
-                                  : "border-navy-200"
+                                  ? "border-slate-500"
+                                  : "border-slate-200"
                               }`}
                             >
                               <div>{medidas[fieldIndex].texto}</div>
@@ -483,14 +497,14 @@ export default function AdaptacionEducativa() {
                     <button
                       type="button"
                       onClick={() => abrirNuevaMedida(apartadoId)}
-                      className="text-xs rounded text-white bg-navy-800 hover:bg-navy-900 p-2 cursor-pointer mx-1"
+                      className="text-xs rounded text-white bg-slate-800 hover:bg-slate-900 p-2 cursor-pointer mx-1"
                     >
                       Añadir opción
                     </button>
 
                     <button
                       type="button"
-                      className="text-xs rounded text-white bg-navy-800 hover:bg-navy-900 p-2 cursor-pointer"
+                      className="text-xs rounded text-white bg-slate-800 hover:bg-slate-900 p-2 cursor-pointer"
                       onClick={() => {
                         const texto = medidas
                           .filter(
@@ -518,8 +532,8 @@ export default function AdaptacionEducativa() {
               })}
             </section>
 
-            <section className="border-2 border-navy-200 rounded-md bg-navy-50 text-sm self-start lg:sticky lg:top-24">
-              <div className="flex justify-between bg-navy-800 text-white p-4 rounded">
+            <section className="border-2 border-slate-200 rounded-md bg-white text-sm self-start lg:sticky lg:top-24">
+              <div className="flex justify-between bg-slate-800 text-white p-4 rounded">
                 <h2 className="font-bold">Resultado para pegar en Séneca</h2>
                 <p>{textoCompleto.length} caracteres</p>
               </div>
@@ -530,7 +544,7 @@ export default function AdaptacionEducativa() {
                   onClick={() =>
                     copiarTexto(textoCompleto, "Texto completo copiado.")
                   }
-                  className="text-white text-sm bg-navy-800 hover:bg-navy-900 rounded-md cursor-pointer p-2 flex-1"
+                  className="text-white text-sm bg-slate-800 hover:bg-slate-900 rounded-md cursor-pointer p-2 flex-1"
                 >
                   Copiar todo
                 </button>
@@ -538,7 +552,7 @@ export default function AdaptacionEducativa() {
                 <button
                   type="button"
                   onClick={descargarTexto}
-                  className="text-white text-sm bg-navy-800 hover:bg-navy-900 rounded-md cursor-pointer p-2 flex-1"
+                  className="text-white text-sm bg-slate-800 hover:bg-slate-900 rounded-md cursor-pointer p-2 flex-1"
                 >
                   Descargar TXT
                 </button>
@@ -546,7 +560,7 @@ export default function AdaptacionEducativa() {
                 <button
                   type="button"
                   onClick={() => imprimirTexto()}
-                  className="text-white text-sm bg-navy-800 hover:bg-navy-900 rounded-md cursor-pointer p-2 flex-1"
+                  className="text-white text-sm bg-slate-800 hover:bg-slate-900 rounded-md cursor-pointer p-2 flex-1"
                 >
                   Imprimir PDF
                 </button>
@@ -558,7 +572,7 @@ export default function AdaptacionEducativa() {
                   value={textoCompleto}
                   rows={32}
                   readOnly
-                  className="p-2 min-w-full text-sm font-mono bg-white rounded-md border border-navy-200"
+                  className="p-2 min-w-full text-sm font-mono bg-white rounded-md border border-slate-200 focus:border-slate-700 focus:outline-none focus:ring-0"
                 />
               </div>
             </section>

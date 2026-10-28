@@ -14,6 +14,20 @@
   --color-navy-950: #001831;
 }
 
+@theme {
+  --color-slate-50: #f8f2f0;
+  --color-slate-100: #f1e6e1;
+  --color-slate-200: #e4c9bf;
+  --color-slate-300: #d9b09d;
+  --color-slate-400: #c7967d;
+  --color-slate-500: #ad826c;
+  --color-slate-600: #916c5a;
+  --color-slate-700: #795a4a;
+  --color-slate-800: #5f4639;
+  --color-slate-900: #48342a;
+  --color-slate-950: #2a1d16;
+}
+
 html {
-  background-color: var(--color-navy-50);
+  background-color: #faf6f4;
 }
