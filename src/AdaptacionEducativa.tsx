@@ -296,7 +296,7 @@ export default function AdaptacionEducativa() {
       <main>
         <form
           onSubmit={handleSubmit(guardarLocal)}
-          className="flex flex-col gap-4 max-w-11/12 md:max-w-10/12 mx-auto my-20"
+          className="flex flex-col gap-4 max-w-11/12 md:max-w-10/12 mx-auto my-26 md:my-20"
         >
           <section className="border-2 border-slate-200 rounded-md p-2 bg-white">
             <h2 className="font-bold">CRITERIO DE USO</h2>
